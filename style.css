@@ -81,7 +81,7 @@ body {
 
 /* projects */
 .project-title{
-    margin-left: 24px;
+    margin-left: 14px;
     margin-bottom: -30px;
 }
 
@@ -103,6 +103,7 @@ body {
     color: white;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease;
+    margin-bottom: 100px;
 }
 
 
@@ -155,40 +156,59 @@ body {
 
 
 /* skills */
-.skiils-title{
-    margin-left: 24px;
+.skills-title{
+    margin-left: 14px;
     margin-bottom: -30px;
 }
 
-.skiils-upper{
+.skills-wrapper {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); 
+    grid-template-rows: repeat(2, auto);  
+    gap: 2rem;
+    padding: 1rem;
+    width: 100%;
+    border-radius: 1.5rem;
+    box-sizing: border-box;
+}
+
+.skills-card {
+    background-color: #2a2a2a7b;
+    padding: 1rem;
+    border-radius: 1rem;
     color: white;
-    text-align: left;
-    font-size: 38px;
-    margin-bottom: 35px;
-    font-family: 'Oswald';
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+    text-align: center;
 }
 
 
-.skills-wrapper{
-    text-align: left;
+.skills-card:hover {
+    transform: scale(1.05);
+    z-index: 10;
+}
+
+.skills-row {
+    display: flex;
+    gap: 2rem; 
+    justify-content: flex-start; 
+    flex-wrap: wrap; 
 }
 
 .skills-upper{
     color: white;
     text-align: left;
     font-size: 38px;
-    margin-bottom: -5px;
+    margin-bottom: 35px;
     font-family: 'Oswald';
 }
-.skills-below{
-    color: white;
-    text-align: left;
-    font-size: 15px;
+.skill-card:hover {
+  transform: scale(1.05);
 }
 
-
-
-
+.icon{  
+    width: 40px;
+}
 
 
 
@@ -204,6 +224,20 @@ body {
 
 @media (hover: none) and (pointer: coarse) {
   .project-card:active {
+    transform: scale(1.05);
+    z-index: 10;
+  }
+}
+
+@media (max-width: 768px) {
+  .skills-wrapper {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto; 
+  }
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .skills-card:active {
     transform: scale(1.05);
     z-index: 10;
   }
