@@ -163,11 +163,11 @@ body {
 
 .skills-wrapper {
     display: grid;
-    grid-template-columns: repeat(6, 1fr); 
+    grid-template-columns: repeat(5, 1fr); 
     grid-template-rows: repeat(2, auto);  
     gap: 2rem;
     padding: 1rem;
-    width: 100%;
+    width: 105%;
     border-radius: 1.5rem;
     box-sizing: border-box;
 }
@@ -180,6 +180,7 @@ body {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease;
     text-align: center;
+    
 }
 
 
@@ -202,12 +203,27 @@ body {
     margin-bottom: 35px;
     font-family: 'Oswald';
 }
+
 .skill-card:hover {
   transform: scale(1.05);
 }
 
 .icon{  
+    vertical-align: middle;
     width: 40px;
+}
+
+.skills{
+    font-size: 15px;
+    font-family: 'Oswald';
+    align-items: center;
+    display: flex;
+    gap: 6px;
+}
+
+.skills-text {
+    vertical-align: middle;
+    line-height: 40px;
 }
 
 
