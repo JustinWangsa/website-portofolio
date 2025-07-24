@@ -1,3 +1,8 @@
+* {
+  box-sizing: border-box;
+  text-align: justify;
+}
+
 body {
     background-image: url('/src/asset/bg.jpg');
     background-size: cover;        
@@ -171,15 +176,16 @@ body {
 .skills-title{
     margin-left: 14px;
     margin-bottom: -30px;
+    margin-top: 125px;
 }
 
 .skills-wrapper {
     display: grid;
-    grid-template-columns: repeat(5, 1fr); 
+    grid-template-columns: repeat(5 , 1fr); 
     grid-template-rows: repeat(2, auto);  
     gap: 2rem;
     padding: 1rem;
-    width: 105%;
+    width: 100%;
     border-radius: 1.5rem;
     box-sizing: border-box;
     margin-bottom: 100px;
@@ -192,7 +198,6 @@ body {
     color: white;
     box-shadow: 0 4px 12px rgb(0, 0, 0);
     transition: transform 0.3s ease;
-    text-align: center;
 }
 
 
@@ -223,15 +228,16 @@ body {
 
 .icon{  
     vertical-align: middle;
-    width: 40px;
+    width: 38px;
 }
 
 .skills{
-    font-size: 15px;
+    font-size: 13px;
+    font-weight: bold;
     font-family: 'Oswald';
     align-items: center;
     display: flex;
-    gap: 14px;
+    gap: 18.9px;
 }
 
 .skills-text {
@@ -242,16 +248,68 @@ body {
 
 
 /* contact */
-.contact-upper{
-    color: white;
-    text-align: left;
-    font-size: 38px;
-    margin-bottom: 35px;
-    font-family: 'Oswald';
+
+.contact-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto 100px auto;
+    background-color: rgba(255, 255, 255, 0.025);
+    border-radius: 1rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(6px);
 }
 
-.contact-wrapper{
+.contact-card {
+    background-color: #2a2a2a7b;
+    padding: 2rem;
+    border-radius: 1rem;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-family: 'Lato';
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
 }
+
+.contact-card:hover {
+    transform: scale(1.03);
+}
+
+.contact-card h1 {
+    font-size: 20px;
+    color: white;
+    margin-bottom: 1rem;
+    font-family: 'oswald';
+    margin-top: -10px;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.contact-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: 1px solid white;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.contact-links a:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
 
 
 
@@ -261,27 +319,36 @@ body {
 @media (max-width: 768px) {
   .project-wrapper {
     grid-template-columns: 1fr;
-    grid-template-rows: auto; 
+    grid-template-rows: auto;
   }
-}
 
-@media (hover: none) and (pointer: coarse) {
-  .project-card:active {
-    transform: scale(1.05);
-    z-index: 10;
-  }
-}
-
-@media (max-width: 768px) {
   .skills-wrapper {
     grid-template-columns: 1fr;
-    grid-template-rows: auto; 
+    grid-template-rows: auto;
   }
-}
 
-@media (hover: none) and (pointer: coarse) {
-  .skills-card:active {
-    transform: scale(1.05);
-    z-index: 10;
+  .skills {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .inven-wrapper {
+    width: 100%;
+  }
+
+  .skills-card {
+    width: 100%;
+  }
+
+  .main {
+    margin-top: 150px;
+    margin-bottom: 10rem;
+    padding: 1rem;
+  }
+
+  .contact-card {
+    width: 100%;
+    padding: 1rem;
   }
 }
