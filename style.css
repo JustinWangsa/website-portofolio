@@ -438,6 +438,22 @@ body {
     width: 100%;
     padding: 1rem;
   }
+
+    .contact-card {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 100%;
+    padding: 1.5rem;
+  }
+
+  .contact-card h1 {
+    text-align: center;
+  }
+
+  .contact-desc {
+    text-align: center;
+  }
 }
 
 @keyframes fadeInUp {
